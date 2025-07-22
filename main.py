@@ -1,6 +1,6 @@
 import pygame
 from constants import *
-from player import *
+from player import Player
 
 def main():
     pygame.init()
@@ -16,7 +16,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-
+        playerModel.update(dt)
         playerModel.draw(screen)
 
 
